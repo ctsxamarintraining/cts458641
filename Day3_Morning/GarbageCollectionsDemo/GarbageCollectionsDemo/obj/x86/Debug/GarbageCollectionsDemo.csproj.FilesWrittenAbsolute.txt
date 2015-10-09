@@ -1,0 +1,5 @@
+/Users/nikhil/Projects/GarbageCollectionsDemo/GarbageCollectionsDemo/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/nikhil/Projects/GarbageCollectionsDemo/GarbageCollectionsDemo/bin/Debug/GarbageCollectionsDemo.exe.mdb
+/Users/nikhil/Projects/GarbageCollectionsDemo/GarbageCollectionsDemo/bin/Debug/GarbageCollectionsDemo.exe
+/Users/nikhil/Projects/GarbageCollectionsDemo/GarbageCollectionsDemo/obj/x86/Debug/GarbageCollectionsDemo.exe
+/Users/nikhil/Projects/GarbageCollectionsDemo/GarbageCollectionsDemo/obj/x86/Debug/GarbageCollectionsDemo.exe.mdb
