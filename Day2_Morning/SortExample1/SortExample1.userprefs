@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="SortExample1/SortExample1.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SortExample1/Person.cs">
+    <Files>
+      <File FileName="SortExample1/Program.cs" Line="40" Column="12" />
+      <File FileName="SortExample1/Person.cs" Line="13" Column="4" />
+      <File FileName="../4DArray/4DArray/Program.cs" Line="43" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
