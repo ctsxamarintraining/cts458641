@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{41BD0D1E-F833-45BB-A4DE-D9A329B1F5A3}</ProjectGuid>
+    <ProjectGuid>{312EE28C-101C-42AD-8861-D5332427ADEA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ArrayProb2</RootNamespace>
-    <AssemblyName>ArrayProb2</AssemblyName>
+    <RootNamespace>GenericsAssignment</RootNamespace>
+    <AssemblyName>GenericsAssignment</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LinkedList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
