@@ -3,3 +3,8 @@
 /Users/nikhil/Projects/4DArray/4DArray/bin/Debug/4DArray.exe
 /Users/nikhil/Projects/4DArray/4DArray/obj/x86/Debug/4DArray.exe
 /Users/nikhil/Projects/4DArray/4DArray/obj/x86/Debug/4DArray.exe.mdb
+/Users/prashant/Documents/cts458641/Day2_Morning/4DArray/4DArray/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/prashant/Documents/cts458641/Day2_Morning/4DArray/4DArray/bin/Debug/4DArray.exe.mdb
+/Users/prashant/Documents/cts458641/Day2_Morning/4DArray/4DArray/bin/Debug/4DArray.exe
+/Users/prashant/Documents/cts458641/Day2_Morning/4DArray/4DArray/obj/x86/Debug/4DArray.exe
+/Users/prashant/Documents/cts458641/Day2_Morning/4DArray/4DArray/obj/x86/Debug/4DArray.exe.mdb

@@ -1,12 +1,12 @@
 ﻿using System;
-namespace DArray
+namespace DataArray
 {
 class Program
 {
 	static void Main()
 	{
 
-		string[, , ,] fourdimension = new string[2, 2, 2, 2];
+		string[, , ,] fourdimension = new string[3, 2, 2, 2];
 			fourdimension [0, 0, 0, 0] = "one";
 			fourdimension [0, 0, 0, 1] = "two";
 			fourdimension [0, 0, 1, 0] = "three";
@@ -47,4 +47,3 @@ class Program
 	}
 }
 	}
-}
