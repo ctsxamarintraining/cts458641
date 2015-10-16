@@ -1,0 +1,5 @@
+/Users/prashant/Documents/C# Assignments/IList/IList/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/prashant/Documents/C# Assignments/IList/IList/bin/Debug/IList.exe.mdb
+/Users/prashant/Documents/C# Assignments/IList/IList/bin/Debug/IList.exe
+/Users/prashant/Documents/C# Assignments/IList/IList/obj/x86/Debug/IList.exe
+/Users/prashant/Documents/C# Assignments/IList/IList/obj/x86/Debug/IList.exe.mdb

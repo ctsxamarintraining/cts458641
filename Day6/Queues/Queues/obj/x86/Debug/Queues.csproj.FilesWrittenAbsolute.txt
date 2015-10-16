@@ -1,0 +1,5 @@
+/Users/prashant/Documents/C# Assignments/Queues/Queues/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/prashant/Documents/C# Assignments/Queues/Queues/bin/Debug/Queues.exe.mdb
+/Users/prashant/Documents/C# Assignments/Queues/Queues/bin/Debug/Queues.exe
+/Users/prashant/Documents/C# Assignments/Queues/Queues/obj/x86/Debug/Queues.exe
+/Users/prashant/Documents/C# Assignments/Queues/Queues/obj/x86/Debug/Queues.exe.mdb
