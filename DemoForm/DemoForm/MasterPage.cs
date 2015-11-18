@@ -3,7 +3,7 @@ using System.Collections;
 
 using Xamarin.Forms;
 
-namespace XamarinForms1
+namespace DemoForm
 {
 	public class MasterPage : Xamarin.Forms.MasterDetailPage
 	{
@@ -14,7 +14,7 @@ namespace XamarinForms1
 			Label header = new Label {
 				Text = "MasterDetailPage",
 				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
-				HorizontalOptions = LayoutOptions.Center
+				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
 
 			string[] array = new string[]{ "ContentPage", "CarouselPage", "TabbedPage" };
@@ -34,13 +34,13 @@ namespace XamarinForms1
 				}
 			};
 
-			//this.Detail = new NavigationPage (new MyPage ());
+			this.Detail = new NavigationPage (new MyPage ());
 
 
 			listView.ItemSelected += (sender, args) => {
-				if (listView.SelectedItem.ToString () == @"ContentPage") {
-
-				} else if (listView.SelectedItem.ToString () == @"CarouselPage") {
+				if (listView.SelectedItem.ToString () == "ContentPage") {
+					this.Detail = new NavigationPage (new MyPage ());
+				} else if (listView.SelectedItem.ToString () == "CarouselPage") {
 					this.Detail = new NavigationPage (new CarouselPage ());
 				} else {
 					this.Detail = new NavigationPage (new TabbedPage ());

@@ -1,9 +1,13 @@
-﻿<Properties StartupItem="DemoForm/DemoForm.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DemoForm/MasterPage.cs">
+﻿<Properties StartupItem="iOS/DemoForm.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.8.3" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DemoForm/LoginPage.cs">
     <Files>
-      <File FileName="DemoForm/MyPage.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/MasterPage.cs" Line="51" Column="6" />
+      <File FileName="DemoForm/DemoForm.cs" Line="12" Column="7" />
+      <File FileName="DemoForm/MyPage.cs" Line="28" Column="25" />
+      <File FileName="DemoForm/MasterPage.cs" Line="6" Column="19" />
+      <File FileName="DemoForm/LoginPage.cs" Line="16" Column="6" />
+      <File FileName="DemoForm/Single.cs" Line="16" Column="8" />
+      <File FileName="DemoForm/FormPage.cs" Line="19" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
