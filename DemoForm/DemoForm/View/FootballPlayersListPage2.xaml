@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoForm.FootballPlayersListPage2">
+	<ContentPage.Content>
+	<ListView x:Name="FootballPlayerListView" ItemsSource="{Binding Football_Player_List}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout BackgroundColor="#eee" Orientation="Vertical">
+							
+									<Label Text="{Binding FirstName}" TextColor="#f35e20" />
+								
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

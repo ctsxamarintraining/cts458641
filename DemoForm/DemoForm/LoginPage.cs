@@ -38,7 +38,7 @@ namespace DemoForm
 									
 				} else if (username.Text == "Prashant" && password.Text == "1234") {
 
-					this.Navigation.PushAsync (new MasterPage ());
+					this.Navigation.PushModalAsync (new MasterPage ());
 
 				}
 			};

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace XamarinForms1
+namespace DemoForm
 {
 	public class CarouselPage : Xamarin.Forms.CarouselPage
 	{

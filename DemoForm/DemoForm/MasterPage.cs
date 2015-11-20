@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-
+using SQLite;
 using Xamarin.Forms;
 
 namespace DemoForm
@@ -9,15 +9,27 @@ namespace DemoForm
 	{
 		public MasterPage ()
 		{
+			SQLiteConnection database;
+
+			database = DependencyService.Get<ISQLite> ().GetConnection ();
+
+
+
+			database.CreateTable<Person> ();
+			//	database.Insert (personObj);	
+			//			
+			//
+			//
+			var stockList = database.Table<Person> ();
 
 
 			Label header = new Label {
 				Text = "MasterDetailPage",
 				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
-				HorizontalOptions = LayoutOptions.CenterAndExpand
+				HorizontalOptions = LayoutOptions.Center
 			};
 
-			string[] array = new string[]{ "ContentPage", "CarouselPage", "TabbedPage" };
+			string[] array = new string[]{ "List", "CarouselPage", "TabbedPage" };
 
 			ListView listView = new ListView {
 				ItemsSource = array
@@ -34,12 +46,16 @@ namespace DemoForm
 				}
 			};
 
-			this.Detail = new NavigationPage (new MyPage ());
+			this.Detail = new NavigationPage (new FootballPlayerListPage (stockList));
+			//var stockList = database.Table<Person> ();
 
-
+			//	Person personObj = new Person (firstname.Text, g.Text, description.Text, datePicker.Date.ToString (), array [picker.SelectedIndex]);
+		
+			//		
 			listView.ItemSelected += (sender, args) => {
-				if (listView.SelectedItem.ToString () == "ContentPage") {
-					this.Detail = new NavigationPage (new MyPage ());
+				if (listView.SelectedItem.ToString () == "List") {
+					
+					this.Detail = new NavigationPage (new FootballPlayerListPage (stockList));
 				} else if (listView.SelectedItem.ToString () == "CarouselPage") {
 					this.Detail = new NavigationPage (new CarouselPage ());
 				} else {

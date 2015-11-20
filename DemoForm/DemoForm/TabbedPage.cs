@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace XamarinForms1
+namespace DemoForm
 {
 	public class TabbedPage : Xamarin.Forms.TabbedPage
 	{
