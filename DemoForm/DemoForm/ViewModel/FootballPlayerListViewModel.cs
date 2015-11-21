@@ -12,7 +12,7 @@ namespace DemoForm
 
 		public string cName{ get; set; }
 
-		public string gender{ get; set; }
+		public string lName{ get; set; }
 
 		public string country{ get; set; }
 

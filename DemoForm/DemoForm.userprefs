@@ -1,23 +1,17 @@
 ﻿<Properties StartupItem="iOS/DemoForm.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DemoForm/DemoForm.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DemoForm/View/FootballPlayerListPage.xaml">
     <Files>
-      <File FileName="DemoForm/FormPage.cs" Line="113" Column="5" />
-      <File FileName="DemoForm/View/FootballPlayersListPage.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/DemoForm.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/MasterPage.cs" Line="38" Column="46" />
-      <File FileName="DemoForm/Single.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/MyPage.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/LoginPage.cs" Line="1" Column="1" />
-      <File FileName="iOS/Main.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/Model/FootballPlayer.cs" Line="29" Column="18" />
-      <File FileName="DemoForm/ViewModel/FootballPlayerViewModel.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/Model/ISQLite.cs" Line="1" Column="1" />
-      <File FileName="iOS/Sqlite_iOS.cs" Line="1" Column="1" />
-      <File FileName="DemoForm/View/FootballPlayersListPage2.xaml" Line="13" Column="17" />
-      <File FileName="DemoForm/View/FootballPlayersListPage2.xaml.cs" Line="12" Column="4" />
-      <File FileName="DemoForm/ViewModel/FootballPlayerListViewModel.cs" Line="27" Column="77" />
-      <File FileName="iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="DemoForm/MasterPage.cs" Line="53" Column="3" />
+      <File FileName="DemoForm/FormPage.cs" Line="126" Column="45" />
+      <File FileName="DemoForm/MyPage.cs" Line="5" Column="1" />
+      <File FileName="DemoForm/Model/FootballPlayer.cs" Line="13" Column="2" />
+      <File FileName="DemoForm/ViewModel/FootballPlayerListViewModel.cs" Line="21" Column="31" />
+      <File FileName="DemoForm/View/FootballPlayerListPage.xaml" Line="24" Column="69" />
+      <File FileName="DemoForm/View/FootballPlayerListPage.xaml.cs" Line="14" Column="4" />
+      <File FileName="DemoForm/TabbedPage.cs" Line="5" Column="19" />
+      <File FileName="DemoForm/CarouselPage.cs" Line="6" Column="19" />
+      <File FileName="DemoForm/LoginPage.cs" Line="41" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,37 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoForm.FootballPlayerListPage">
 	<ContentPage.ToolbarItems>
-
-            <ToolbarItem Name="Add Player" Activated="OnClick"  Order="Primary" Priority="0" />
-      
-
-    </ContentPage.ToolbarItems>
-
-
+		<ToolbarItem Name="Add Player" Activated="OnClick" Order="Primary" Priority="0" />
+	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
-
-	 <ListView x:Name="FootballPlayerPages1" ItemsSource="{Binding Football_Player}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout BackgroundColor="#eee"
-                        Orientation="Vertical">
-            
-                                 <Label Text="{Binding cName}"
-                                TextColor="#f35e20" />
-                                 <Label Text="{Binding country}"
-                                TextColor="#f35e20" />
-                                <Label Text="{Binding descriptiondet}"
-                                TextColor="#f35e20" />
-
-
-                               </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-
-
+		<ListView x:Name="FootballPlayerPages1" ItemSelected="OnItemSelected" ItemsSource="{Binding Football_Player}" RowHeight="150">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.ContextActions>
+							<MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
+						</ViewCell.ContextActions>
+						<StackLayout BackgroundColor="#eee" Orientation="Horizontal">
+							<Image Source="maradona.jpg" />
+							<StackLayout BackgroundColor="#eee" Orientation="Vertical">
+								<Label Text="{Binding cName}" TextColor="Black" />
+								<Label Text="{Binding lName}" TextColor="Black" />
+								<Label Text="{Binding country}" TextColor="Black" />
+								<Label Text="{Binding date}" TextColor="Black" />
+								<Label Text="{Binding descriptiondet}" TextColor="Black" />
+								<Label Text="Favorite" TextColor="Black" />
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
 	</ContentPage.Content>
 </ContentPage>

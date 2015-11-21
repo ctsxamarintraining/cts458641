@@ -24,7 +24,7 @@ namespace DemoForm
 
 		public string cName{ get; set; }
 
-		public string gender{ get; set; }
+		public string lName{ get; set; }
 
 		public string country{ get; set; }
 
@@ -34,10 +34,11 @@ namespace DemoForm
 
 
 
-		public Person (string customerName, string customerGender, string description, string dateSelected, string countrySelected)
+		public Person (string customerName, string lastName, string countrySelected, string dateSelected, string description)
 		{
 			cName = customerName;
-			gender = customerGender;
+			lName = lastName;
+			country = countrySelected;
 			date = dateSelected;
 			descriptiondet = description;
 		}

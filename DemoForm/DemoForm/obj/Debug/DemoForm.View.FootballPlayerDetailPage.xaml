@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoForm.FootballPlayerDetailPage">
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout.Padding>
+0,20,0,0
+        </StackLayout.Padding>
+			<Label HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="FirstNameDetail" />
+			<Label HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="LastNameDetail" />
+			<Label Text="Date of Birth" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="DOBLabel" />
+			<Label HorizontalOptions="CenterAndExpand" x:Name="DOBDetail" />
+			<Label Text="Description" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" />
+			<Label TextColor="Blue" HorizontalOptions="CenterAndExpand" FontSize="Large" x:Name="DescriptionDetail" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
