@@ -4,23 +4,26 @@
 		<ToolbarItem Name="Add Player" Activated="OnClick" Order="Primary" Priority="0" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
-		<ListView x:Name="FootballPlayerPages1" ItemSelected="OnItemSelected" ItemsSource="{Binding Football_Player}" RowHeight="150">
+		<ListView x:Name="FootballPlayerPages1" ItemSelected="OnItemSelected" ItemsSource="{Binding Football_Player}" RowHeight="120">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
 						<ViewCell.ContextActions>
 							<MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
+							<MenuItem Clicked="Favourites_Clicked" CommandParameter="{Binding .}" Text="Favorite" IsDestructive="True" />
 						</ViewCell.ContextActions>
 						<StackLayout BackgroundColor="#eee" Orientation="Horizontal">
 							<Image Source="maradona.jpg" />
 							<StackLayout BackgroundColor="#eee" Orientation="Vertical">
-								<Label Text="{Binding cName}" TextColor="Black" />
-								<Label Text="{Binding lName}" TextColor="Black" />
-								<Label Text="{Binding country}" TextColor="Black" />
+								<StackLayout BackgroundColor="#eee" Orientation="Horizontal">
+									<Label Text="{Binding cName}" TextColor="Black" />
+									<Label Text="{Binding lName}" TextColor="Black" />
+								</StackLayout>
+								<Label Text="{Binding country}" TextColor="Red" />
 								<Label Text="{Binding date}" TextColor="Black" />
-								<Label Text="{Binding descriptiondet}" TextColor="Black" />
-								<Label Text="Favorite" TextColor="Black" />
+								<Label Text="{Binding descriptiondet}" TextColor="Blue" />
 							</StackLayout>
+							<Image x:Name="image" Source="{Binding countryImage}" WidthRequest="100" HeightRequest="100" HorizontalOptions="End" />
 						</StackLayout>
 					</ViewCell>
 				</DataTemplate>

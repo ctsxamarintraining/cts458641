@@ -36,6 +36,10 @@ namespace DemoForm
 			};
 			layout.Children.Add (firstname, Constraint.Constant (135), Constraint.Constant (60));
 
+		
+
+
+
 			var lastNameLabel = new Label {
 				Text = "Last Name"
 			};
@@ -49,11 +53,11 @@ namespace DemoForm
 			var dob = new Label {
 				Text = "Date of Birth"
 			};
-			layout.Children.Add (dob, Constraint.Constant (40), Constraint.Constant (130));
+			layout.Children.Add (dob, Constraint.Constant (40), Constraint.Constant (140));
 
-
+				
 			var datePicker = new DatePicker ();
-			layout.Children.Add (datePicker, Constraint.Constant (135), Constraint.Constant (130));
+			layout.Children.Add (datePicker, Constraint.Constant (135), Constraint.Constant (140));
 
 
 			var description = new Entry {
@@ -81,15 +85,15 @@ namespace DemoForm
 			layout.Children.Add (picker, Constraint.Constant (140), Constraint.Constant (250), Constraint.Constant (100));
 
 
-			var selectAImage = new Button { Text = "CaptureImage", TextColor = Color.Black, BackgroundColor = Color.Gray };
-			layout.Children.Add (selectAImage, Constraint.Constant (140), Constraint.Constant (320));
-
-
-			selectAImage.Clicked += (sender, e) => {
-
-
-
-			};
+//			var selectAImage = new Button { Text = "CaptureImage", TextColor = Color.Black, BackgroundColor = Color.Gray };
+//			layout.Children.Add (selectAImage, Constraint.Constant (140), Constraint.Constant (320));
+//
+//
+//			selectAImage.Clicked += (sender, e) => {
+//
+//
+//
+//			};
 				
 			var v = new BoxView {HeightRequest = 1, BackgroundColor = Color.Black
 
@@ -102,20 +106,23 @@ namespace DemoForm
 
 			button.Clicked += (sender, e) => {
 
-				Person personObj = new Person (firstname.Text, lastname.Text, description.Text, datePicker.Date.ToString (), array [picker.SelectedIndex]);
+
+				Person personObj = new Person (firstname.Text, lastname.Text, array [picker.SelectedIndex], datePicker.Date.ToString (), description.Text, false);
+										
+				
+
 				database = DependencyService.Get<ISQLite> ().GetConnection ();
 
 
 
 				database.CreateTable<Person> ();
 				database.Insert (personObj);	
-			
-				var stockList = database.Table<Person> ();
-			
-				//				this.Navigation.PushAsync(new FootballPlayersListPage(stockList));
-				this.Navigation.PushAsync (new FootballPlayerListPage (stockList));
-				//this.Navigation.PopAsync (new FootballPlayerListPage (stockList));
 
+				var stockList = database.Table<Person> ();
+
+				this.Navigation.PushAsync (new FootballPlayerListPage (stockList));
+
+						
 
 			};
 
@@ -123,8 +130,7 @@ namespace DemoForm
 
 			this.Content = layout;
 
-
+		
 		}
 	}
 }
-

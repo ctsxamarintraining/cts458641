@@ -46,9 +46,6 @@
     <Compile Include="View\FootballPlayerListPage.xaml.cs">
       <DependentUpon>FootballPlayerListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FootballPlayersListPage.cs">
-      <DependentUpon>DemoForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FootballPlayerDetailPage.xaml.cs">
       <DependentUpon>FootballPlayerDetailPage.xaml</DependentUpon>
     </Compile>

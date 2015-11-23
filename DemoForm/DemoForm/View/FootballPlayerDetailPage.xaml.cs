@@ -20,7 +20,7 @@ namespace DemoForm
 			this.LastNameDetail.Text = myObj.lName;
 			this.DOBDetail.Text = myObj.date.ToString ();
 			this.DescriptionDetail.Text = myObj.descriptiondet;
-
+			this.isFav.Text = myObj.fav.ToString ();
 
 
 		}

@@ -32,6 +32,9 @@ namespace DemoForm {
         private global::Xamarin.Forms.Label DescriptionDetail;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label isFav;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(FootballPlayerDetailPage));
             FirstNameDetail = this.FindByName <global::Xamarin.Forms.Label>("FirstNameDetail");
@@ -39,6 +42,7 @@ namespace DemoForm {
             DOBLabel = this.FindByName <global::Xamarin.Forms.Label>("DOBLabel");
             DOBDetail = this.FindByName <global::Xamarin.Forms.Label>("DOBDetail");
             DescriptionDetail = this.FindByName <global::Xamarin.Forms.Label>("DescriptionDetail");
+            isFav = this.FindByName <global::Xamarin.Forms.Label>("isFav");
         }
     }
 }

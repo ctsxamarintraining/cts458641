@@ -32,15 +32,78 @@ namespace DemoForm
 
 		public string descriptiondet{ get; set; }
 
+		public bool fav{ get; set ; }
 
 
-		public Person (string customerName, string lastName, string countrySelected, string dateSelected, string description)
+
+		public Person (string customerName, string lastName, string countrySelected, string dateSelected, string description, bool f)
 		{
 			cName = customerName;
 			lName = lastName;
 			country = countrySelected;
 			date = dateSelected;
 			descriptiondet = description;
+			f = fav;
 		}
+
+	
+		public void deletePlayer (int myId)
+		{
+		
+			SQLiteConnection database;
+			
+			database = DependencyService.Get<ISQLite> ().GetConnection ();
+			
+			
+			
+			database.CreateTable<Person> ();
+			database.Delete<Person> (myId);
+		
+		}
+
+		public void updateplayerFavourite (Person obj)
+		{
+			SQLiteConnection database;
+
+			database = DependencyService.Get<ISQLite> ().GetConnection ();
+
+
+
+			database.CreateTable<Person> ();
+			database.Update (obj);
+
+		}
+
+		public IEnumerable<Person> GetItems ()
+		{
+
+			SQLiteConnection database;
+
+			database = DependencyService.Get<ISQLite> ().GetConnection ();
+
+
+
+			var myList = from i in database.Table<Person> ()
+			             select i;
+			var FavSort = from player in myList
+				orderby player.fav descending
+			              select player;
+
+			var sort2 = FavSort.OrderBy ((x => x.cName));
+			return sort2;
+
+
+		}
+
+
+		public string countryImage {
+
+			get {
+
+				var c = String.Concat (country, ".png");
+				return c;
+			}
+		}
+
 	}
 }

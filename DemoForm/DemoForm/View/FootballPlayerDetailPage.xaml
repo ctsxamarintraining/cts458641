@@ -3,7 +3,7 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<StackLayout.Padding>
-0,20,0,0
+			0,20,0,0
         </StackLayout.Padding>
 			<Label HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="FirstNameDetail" />
 			<Label HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="LastNameDetail" />
@@ -11,6 +11,8 @@
 			<Label HorizontalOptions="CenterAndExpand" x:Name="DOBDetail" />
 			<Label Text="Description" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" />
 			<Label TextColor="Blue" HorizontalOptions="CenterAndExpand" FontSize="Large" x:Name="DescriptionDetail" />
+			<Label Text="Favorite" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" />
+			<Label Text="Favorite" HorizontalOptions="CenterAndExpand" FontSize="Large" x:Name="isFav" TextColor="Black" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

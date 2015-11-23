@@ -109,6 +109,12 @@
     <BundleResource Include="Resources\img.jpg" />
     <BundleResource Include="Resources\ron.jpg" />
     <BundleResource Include="Resources\maradona.jpg" />
+    <BundleResource Include="Resources\belgium.png" />
+    <BundleResource Include="Resources\brazil.png" />
+    <BundleResource Include="Resources\England_flag.png" />
+    <BundleResource Include="Resources\india.png" />
+    <BundleResource Include="Resources\spain.png" />
+    <BundleResource Include="Resources\usa.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

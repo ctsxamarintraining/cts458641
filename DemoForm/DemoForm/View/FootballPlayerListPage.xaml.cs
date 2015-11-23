@@ -28,11 +28,24 @@ namespace DemoForm
 
 		public void OnDelete (object sender, EventArgs e)
 		{
-//			var mi = ((MenuItem)sender);
-//			//DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
-//
-//			Debug.WriteLine ("delete " + mi.CommandParameter.ToString ());
-//			//items.Remove (mi.CommandParameter.ToString ());
+			Person p = new Person ();
+			var x1 = (MenuItem)sender;
+			var x2 = x1.BindingContext;
+			Person x3 = (Person)x2;
+			x3.deletePlayer (x3.key);
+
+			MessagingCenter.Send (this, "delete");
+
+			SQLiteConnection database;
+			database = DependencyService.Get<ISQLite> ().GetConnection ();
+			database.Update (p);
+
+
+
+			var stockList = database.Table<Person> ();
+
+			this.Navigation.PushAsync (new FootballPlayerListPage (stockList));
+
 		}
 
 		void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -40,21 +53,39 @@ namespace DemoForm
 			if (e.SelectedItem == null) {
 				return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
 			}
-			SQLiteConnection database;
 
-			database = DependencyService.Get<ISQLite> ().GetConnection ();
-
-
-
-			database.CreateTable<Person> ();
-			//	database.Insert (personObj);	
-			//			
-			//
-			//
-			var stockList = database.Table<Person> ();
 			this.Navigation.PushAsync (new FootballPlayerDetailPage (e.SelectedItem));
 
 			//((ListView)sender).SelectedItem = null; //uncomment line if you want to disable the visual selection state.
+		}
+
+		void Favourites_Clicked (object sender, EventArgs e)
+		{
+
+			MenuItem button = (MenuItem)sender;
+
+			var x1 = (MenuItem)sender;
+			var x2 = x1.BindingContext;
+			Person x3 = (Person)x2;
+			x3.fav =	!x3.fav;
+			if (x3.fav) {
+
+
+				button.Text = "Un Favourite";
+			} else {
+				button.Text = "Mark Favourite";
+			}
+			x3.updateplayerFavourite (x3);
+		}
+
+
+
+		protected override void OnAppearing ()
+		{
+			base.OnAppearing ();
+			Person dat = new Person ();
+			FootballPlayerPages1.ItemsSource = dat.GetItems ();
+
 		}
 	}
 }
