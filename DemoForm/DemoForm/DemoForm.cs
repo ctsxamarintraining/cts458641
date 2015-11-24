@@ -6,6 +6,8 @@ namespace DemoForm
 {
 	public class App : Application
 	{
+		public static string folderPath;
+
 		public App ()
 		{
 			// The root page of your application

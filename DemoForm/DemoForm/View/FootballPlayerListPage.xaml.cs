@@ -12,7 +12,7 @@ namespace DemoForm
 	{
 		public FootballPlayerListPage (TableQuery<Person> personObjects)
 		{
-			this.BindingContext = new FootballPlayerListViewModel (personObjects);
+			this.BindingContext = new FootballPlayerListViewModel ();
 			InitializeComponent ();
 
 

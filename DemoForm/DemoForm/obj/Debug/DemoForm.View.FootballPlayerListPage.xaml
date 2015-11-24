@@ -4,7 +4,7 @@
 		<ToolbarItem Name="Add Player" Activated="OnClick" Order="Primary" Priority="0" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
-		<ListView x:Name="FootballPlayerPages1" ItemSelected="OnItemSelected" ItemsSource="{Binding Football_Player}" RowHeight="120">
+		<ListView x:Name="FootballPlayerPages1" ItemSelected="OnItemSelected" ItemsSource="{Binding Football_Player}" RowHeight="110">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
@@ -13,7 +13,7 @@
 							<MenuItem Clicked="Favourites_Clicked" CommandParameter="{Binding .}" Text="Favorite" IsDestructive="True" />
 						</ViewCell.ContextActions>
 						<StackLayout BackgroundColor="#eee" Orientation="Horizontal">
-							<Image Source="maradona.jpg" />
+							<Image Source="Indian_Football.jpeg" />
 							<StackLayout BackgroundColor="#eee" Orientation="Vertical">
 								<StackLayout BackgroundColor="#eee" Orientation="Horizontal">
 									<Label Text="{Binding cName}" TextColor="Black" />
@@ -23,7 +23,7 @@
 								<Label Text="{Binding date}" TextColor="Black" />
 								<Label Text="{Binding descriptiondet}" TextColor="Blue" />
 							</StackLayout>
-							<Image x:Name="image" Source="{Binding countryImage}" WidthRequest="100" HeightRequest="100" HorizontalOptions="End" />
+							<Image x:Name="image" Source="{Binding countryImage}" WidthRequest="100" HeightRequest="100" HorizontalOptions="EndAndExpand" />
 						</StackLayout>
 					</ViewCell>
 				</DataTemplate>

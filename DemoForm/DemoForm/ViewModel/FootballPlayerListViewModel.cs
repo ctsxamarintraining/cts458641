@@ -3,37 +3,65 @@ using System.Collections.ObjectModel;
 using SQLite;
 using System.Collections.Generic;
 using System.Collections;
+using System.Diagnostics;
+using Xamarin.Forms;
+using System.ComponentModel;
 
 namespace DemoForm
 {
-	public class FootballPlayerListViewModel
+	public class FootballPlayerListViewModel: INotifyPropertyChanged
 	{
 
 
-		public string cName{ get; set; }
+		private ObservableCollection<Person> theFootball_Player_List{ get; set; }
 
-		public string lName{ get; set; }
-
-		public string country{ get; set; }
-
-		public string date{ get; set; }
-
-		public string descriptiondet{ get; set; }
-
-		public FootballPlayerListViewModel (TableQuery<Person> personObjects)
-		{
-			Football_Player = new ObservableCollection<Person> ();
-
-
-
-			foreach (Person p in personObjects) {
-
-				Football_Player.Add (p);
+		public ObservableCollection<Person> Football_Player_List {
+			get {
+				return theFootball_Player_List;
 			}
-
-
+			set {
+				if (theFootball_Player_List != value) {
+					theFootball_Player_List = value;
+					OnPropertyChanged ("Football_Player_List");
+				}
+			}
 		}
 
-		public ObservableCollection<Person> Football_Player{ get; set; }
+		public FootballPlayerListViewModel ()
+		{
+			UpdateTheList ();
+			MessagingCenter.Subscribe<Person> (this, "SomethingHappened", (OBJ) => {
+				UpdateTheList ();
+			}, null);
+		}
+
+		private void UpdateTheList ()
+		{
+			ObservableCollection<Person> coll = new ObservableCollection<Person> ();
+			using (SQLiteConnection connection = DependencyService.Get<ISQLite> ().GetConnection ()) {
+				var list = connection.Query<Person> ("SELECT * FROM PERSON ORDER BY FAV DESC,CNAME ASC");				
+				foreach (var item in list) {
+					coll.Add (item);
+				}
+			}
+			Football_Player_List = coll;
+		}
+
+
+		protected virtual void OnPropertyChanged (string propertyName)
+		{
+			if (PropertyChanged != null) {
+				PropertyChanged (this,
+					new PropertyChangedEventArgs (propertyName));
+				//OnPropertyChanged ("PropertyChanged");
+			}
+		}
+
+		#region INotifyPropertyChanged implementation
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		#endregion
 	}
+
 }

@@ -57,6 +57,7 @@ namespace DemoForm
 
 				
 			var datePicker = new DatePicker ();
+			string format = "d MMM, yyyy";
 			layout.Children.Add (datePicker, Constraint.Constant (135), Constraint.Constant (140));
 
 
@@ -75,7 +76,7 @@ namespace DemoForm
 			layout.Children.Add (cntry, Constraint.Constant (35), Constraint.Constant (250));
 
 
-			string[] array = new string[]{ "India", "USA", "China", "Japan" };
+			string[] array = new string[]{ "India", "USA", "Belgium", "Brazil", "England", "Spain" };
 
 			var picker = new Picker (){ Title = "Country" };
 			foreach (string str in array) {
@@ -107,7 +108,7 @@ namespace DemoForm
 			button.Clicked += (sender, e) => {
 
 
-				Person personObj = new Person (firstname.Text, lastname.Text, array [picker.SelectedIndex], datePicker.Date.ToString (), description.Text, false);
+				Person personObj = new Person (firstname.Text, lastname.Text, array [picker.SelectedIndex], datePicker.Date.ToString (format), description.Text, false);
 										
 				
 

@@ -23,9 +23,6 @@ namespace DemoForm {
         private global::Xamarin.Forms.Label LastNameDetail;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Label DOBLabel;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label DOBDetail;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -39,7 +36,6 @@ namespace DemoForm {
             this.LoadFromXaml(typeof(FootballPlayerDetailPage));
             FirstNameDetail = this.FindByName <global::Xamarin.Forms.Label>("FirstNameDetail");
             LastNameDetail = this.FindByName <global::Xamarin.Forms.Label>("LastNameDetail");
-            DOBLabel = this.FindByName <global::Xamarin.Forms.Label>("DOBLabel");
             DOBDetail = this.FindByName <global::Xamarin.Forms.Label>("DOBDetail");
             DescriptionDetail = this.FindByName <global::Xamarin.Forms.Label>("DescriptionDetail");
             isFav = this.FindByName <global::Xamarin.Forms.Label>("isFav");

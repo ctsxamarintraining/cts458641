@@ -17,9 +17,7 @@ namespace DemoForm
 
 		public Person ()
 		{
-
-
-
+			
 		}
 
 		public string cName{ get; set; }
@@ -49,26 +47,16 @@ namespace DemoForm
 	
 		public void deletePlayer (int myId)
 		{
-		
 			SQLiteConnection database;
-			
 			database = DependencyService.Get<ISQLite> ().GetConnection ();
-			
-			
-			
 			database.CreateTable<Person> ();
 			database.Delete<Person> (myId);
-		
 		}
 
 		public void updateplayerFavourite (Person obj)
 		{
 			SQLiteConnection database;
-
 			database = DependencyService.Get<ISQLite> ().GetConnection ();
-
-
-
 			database.CreateTable<Person> ();
 			database.Update (obj);
 

@@ -39,7 +39,7 @@
 	-r \
 	"/Users/prashant/Documents/C# Assignments/DemoForm/packages/Xamarin.Forms.2.0.0.6484/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll" \
 	-r \
-	"/Users/prashant/Documents/C# Assignments/DemoForm/packages/SQLitePCL.raw_basic.0.8.2/build/Xamarin.iOS10/pinvoke_sqlite3/anycpu/SQLitePCL.raw.dll" \
+	"/Users/prashant/Documents/C# Assignments/DemoForm/packages/SQLitePCL.raw_basic.0.8.3/build/Xamarin.iOS10/pinvoke_sqlite3/anycpu/SQLitePCL.raw.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -151,7 +151,7 @@
 	-r \
 	"/Users/prashant/Documents/C# Assignments/DemoForm/packages/Xamarin.Forms.2.0.0.6484/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll" \
 	-r \
-	"/Users/prashant/Documents/C# Assignments/DemoForm/packages/SQLitePCL.raw_basic.0.8.2/build/Xamarin.iOS10/pinvoke_sqlite3/anycpu/SQLitePCL.raw.dll" \
+	"/Users/prashant/Documents/C# Assignments/DemoForm/packages/SQLitePCL.raw_basic.0.8.3/build/Xamarin.iOS10/pinvoke_sqlite3/anycpu/SQLitePCL.raw.dll" \
 	-r \
 	"/Users/prashant/Documents/C# Assignments/DemoForm/DemoForm/bin/Debug/DemoForm.dll" \
 	--target-framework \

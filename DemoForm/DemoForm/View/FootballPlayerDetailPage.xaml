@@ -7,7 +7,7 @@
         </StackLayout.Padding>
 			<Label HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="FirstNameDetail" />
 			<Label HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="LastNameDetail" />
-			<Label Text="Date of Birth" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" x:Name="DOBLabel" />
+			<Label Text="Date of Birth" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" />
 			<Label HorizontalOptions="CenterAndExpand" x:Name="DOBDetail" />
 			<Label Text="Description" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" />
 			<Label TextColor="Blue" HorizontalOptions="CenterAndExpand" FontSize="Large" x:Name="DescriptionDetail" />
