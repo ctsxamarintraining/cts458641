@@ -36,7 +36,6 @@ namespace DemoForm
 			};
 			layout.Children.Add (firstname, Constraint.Constant (135), Constraint.Constant (60));
 
-		
 
 
 
@@ -112,16 +111,16 @@ namespace DemoForm
 										
 				
 
-				database = DependencyService.Get<ISQLite> ().GetConnection ();
+//				database = DependencyService.Get<ISQLite> ().GetConnection ();
+//
+//
+//
+//				database.CreateTable<Person> ();
+//				database.Insert (personObj);	
+//
+//				var stockList = database.Table<Person> ();
 
-
-
-				database.CreateTable<Person> ();
-				database.Insert (personObj);	
-
-				var stockList = database.Table<Person> ();
-
-				this.Navigation.PushAsync (new FootballPlayerListPage (stockList));
+				this.Navigation.PushAsync (new FootballPlayerListPage ());
 
 						
 

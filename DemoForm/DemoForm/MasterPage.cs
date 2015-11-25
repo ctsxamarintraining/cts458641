@@ -20,7 +20,7 @@ namespace DemoForm
 			//			
 			//
 			//
-			var stockList = database.Table<Person> ();
+			//var stockList = database.Table<Person> ();
 
 
 			Label header = new Label {
@@ -46,7 +46,7 @@ namespace DemoForm
 				}
 			};
 
-			this.Detail = new NavigationPage (new FootballPlayerListPage (stockList));
+			this.Detail = new NavigationPage (new FootballPlayerListPage ());
 			//var stockList = database.Table<Person> ();
 
 			//	Person personObj = new Person (firstname.Text, g.Text, description.Text, datePicker.Date.ToString (), array [picker.SelectedIndex]);
@@ -55,7 +55,7 @@ namespace DemoForm
 			listView.ItemSelected += (sender, args) => {
 				if (listView.SelectedItem.ToString () == "List") {
 					
-					this.Detail = new NavigationPage (new FootballPlayerListPage (stockList));
+					this.Detail = new NavigationPage (new FootballPlayerListPage ());
 				} else if (listView.SelectedItem.ToString () == "CarouselPage") {
 					this.Detail = new NavigationPage (new CarouselPage ());
 				} else {

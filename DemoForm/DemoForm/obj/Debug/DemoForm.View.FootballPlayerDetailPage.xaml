@@ -12,7 +12,7 @@
 			<Label Text="Description" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" />
 			<Label TextColor="Blue" HorizontalOptions="CenterAndExpand" FontSize="Large" x:Name="DescriptionDetail" />
 			<Label Text="Favorite" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" />
-			<Label Text="Favorite" HorizontalOptions="CenterAndExpand" FontSize="Large" x:Name="isFav" TextColor="Black" />
+			<Label HorizontalOptions="CenterAndExpand" FontSize="Large" x:Name="isFav" TextColor="Black" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

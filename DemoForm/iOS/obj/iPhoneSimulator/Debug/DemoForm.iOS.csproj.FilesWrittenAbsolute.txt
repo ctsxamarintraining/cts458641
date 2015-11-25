@@ -26,6 +26,12 @@
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/Icon-Small-40.png
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/Icon-Small-40@2x.png
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/Icon-Small-40@3x.png
+/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/belgium.png
+/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/brazil.png
+/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/india.png
+/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/spain.png
+/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/usa.png
+/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/england.png
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/bin/iPhoneSimulator/Debug/DemoForm.iOS.exe.mdb
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/bin/iPhoneSimulator/Debug/DemoForm.iOS.exe
@@ -40,10 +46,3 @@
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/bin/iPhoneSimulator/Debug/SQLitePCL.raw.dll
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/bin/iPhoneSimulator/Debug/DemoForm.dll
 /Users/prashant/Documents/C# Assignments/DemoForm/iOS/bin/iPhoneSimulator/Debug/DemoForm.dll.mdb
-/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/belgium.png
-/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/brazil.png
-/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/England_flag.png
-/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/india.png
-/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/spain.png
-/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/usa.png
-/Users/prashant/Documents/C# Assignments/DemoForm/iOS/obj/iPhoneSimulator/Debug/optimized/england.png

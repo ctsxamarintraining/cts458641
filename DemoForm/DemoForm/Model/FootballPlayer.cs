@@ -1,11 +1,10 @@
 ﻿using System;
 using SQLite;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using Xamarin.Forms;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+using System.Collections.Generic;
 using System.Diagnostics;
-
 
 namespace DemoForm
 {
@@ -32,7 +31,69 @@ namespace DemoForm
 
 		public bool fav{ get; set ; }
 
+		public ICommand DeleteCommand {
 
+
+			get {
+				return new Command<Person> (execute: (Person theplayer) => {
+					SQLiteConnection database;
+					database = DependencyService.Get<ISQLite> ().GetConnection ();
+					List<Person> newplayerlist = database.Query<Person> ("SELECT * FROM Person WHERE cName = ?", theplayer.cName);
+					database.Delete (newplayerlist [0]);  
+					MessagingCenter.Send (this, "SomethingHappened");
+				});
+			}
+		}
+
+		public ICommand FavouriteCommand {
+
+			get {
+				return new Command<Person> (execute: (Person theplayer) => {
+					SQLiteConnection database;
+					database = DependencyService.Get<ISQLite> ().GetConnection ();
+					List<Person> newplayerlist = database.Query<Person> ("SELECT * FROM Person WHERE cName = ?", theplayer.cName);
+					newplayerlist [0].fav = !(newplayerlist [0].fav);
+
+					database.Update (newplayerlist [0]);  
+					MessagingCenter.Send (this, "SomethingHappened");
+
+				});
+			}
+		}
+
+	
+
+
+
+		public string countryImage {
+
+			get {
+
+				var c = String.Concat (country, ".png");
+				return c;
+			}
+		}
+
+
+		public string Favourite {
+
+			get {
+				string str;
+				if (fav) {
+					str = "Favourite";
+					return str;
+				} else if (!fav) {
+
+					str = "Unfavourite";
+					return str;
+				} else {
+					return "hbj";
+				}
+
+			}
+
+
+		}
 
 		public Person (string customerName, string lastName, string countrySelected, string dateSelected, string description, bool f)
 		{
@@ -45,53 +106,9 @@ namespace DemoForm
 		}
 
 	
-		public void deletePlayer (int myId)
-		{
-			SQLiteConnection database;
-			database = DependencyService.Get<ISQLite> ().GetConnection ();
-			database.CreateTable<Person> ();
-			database.Delete<Person> (myId);
-		}
-
-		public void updateplayerFavourite (Person obj)
-		{
-			SQLiteConnection database;
-			database = DependencyService.Get<ISQLite> ().GetConnection ();
-			database.CreateTable<Person> ();
-			database.Update (obj);
-
-		}
-
-		public IEnumerable<Person> GetItems ()
-		{
-
-			SQLiteConnection database;
-
-			database = DependencyService.Get<ISQLite> ().GetConnection ();
-
-
-
-			var myList = from i in database.Table<Person> ()
-			             select i;
-			var FavSort = from player in myList
-				orderby player.fav descending
-			              select player;
-
-			var sort2 = FavSort.OrderBy ((x => x.cName));
-			return sort2;
-
-
-		}
-
-
-		public string countryImage {
-
-			get {
-
-				var c = String.Concat (country, ".png");
-				return c;
-			}
-		}
-
+	
 	}
+
+
+
 }

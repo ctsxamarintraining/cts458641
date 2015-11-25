@@ -4,13 +4,13 @@
 		<ToolbarItem Name="Add Player" Activated="OnClick" Order="Primary" Priority="0" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
-		<ListView x:Name="FootballPlayerPages1" ItemSelected="OnItemSelected" ItemsSource="{Binding Football_Player}" RowHeight="110">
+		<ListView x:Name="FootballPlayerPages1" ItemSelected="OnItemSelected" ItemsSource="{Binding Football_Player_List}" RowHeight="100">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
 						<ViewCell.ContextActions>
-							<MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
-							<MenuItem Clicked="Favourites_Clicked" CommandParameter="{Binding .}" Text="Favorite" IsDestructive="True" />
+							<MenuItem CommandParameter="{Binding .}" Command="{Binding DeleteCommand}" Text="Delete" IsDestructive="True" />
+							<MenuItem CommandParameter="{Binding .}" Command="{Binding FavouriteCommand}" Text="{Binding Favourite}" />
 						</ViewCell.ContextActions>
 						<StackLayout BackgroundColor="#eee" Orientation="Horizontal">
 							<Image Source="Indian_Football.jpeg" />
